@@ -92,7 +92,7 @@ window.addEventListener('deviceorientation', (e) => {
   tilt.gamma = e.gamma || 0;  
 });
 
-// Rapheal
+// Raphael
 window.addEventListener('devicemotion', (e) => {
   let a = e.acceleration;
   let force;
@@ -176,14 +176,14 @@ if (flash > 0) {
 }
 
 // images become kaleidoscope pattern
-// Rapheal
+// Raphael
 function drawKaleidoscope(img) {
   const radius = Math.sqrt(width * width + height * height) / 2 + 2;
   const slice = TWO_PI / SEGMENTS;
 //Andy &  Wendy
   const offX = constrain(tilt.gamma, -90, 90) / 90 * img.width * 0.25;
   const offY = constrain(tilt.beta - 45, -90, 90) / 90 * img.height * 0.25;
-// Rapheal
+// Raphael
    const turn = radians(tilt.alpha) + spin;
 
   const s = Math.max(radius * 2 / img.width, radius * 2 / img.height) * (1 + shown * 0.4);
